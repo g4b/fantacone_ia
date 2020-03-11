@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Counselor Portal</h1>
+        <h2>Welcome, <%= counselor.name %></h2>
+        <a href='https://docs.google.com/spreadsheets/d/1gY3jeHg3G4ONMB9UJHwrHMo4t8dH_b4O6x80Skcj5xw/edit#gid=0'>CCC Scholarships List</a>
+        <table></table>
+        <!-- list Students -->
+        <p>Search for a Student</p>
+        <form action='searchStudents' method='post'>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='searchName' placeholder="Student's Name">
+            </div>
+            <div class='form-group'>
+                <button type='submit' class='btn btn-primary'>Submit</button>
+            </div>
+        </form>
+        <p id='error'><%= error %></p>
+        <p>Add a Student</p>
+        <form action='addStudent' method='post'>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='name' placeholder='Student Name'>
+            </div>
+                <div class='form-group'>
+                <input type='text' class='form-control' name='email' placeholder='Student Email'>
+            </div>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='smallschool' placeholder='BHS Small School'>
+            </div>
+            <div class='form-group'>
+                <button type='submit' class='btn btn-primary'>Submit</button>
+            </div>
+            </form>
+        </div>
+        <p>Log progress</p>
+        <form action='logProgress' method='post'>
+            <div class='form-group'>
+                <input type='textbox' class='form-control' name='progress' placeholder="Add any updates to your student's process here.">
+                <button type='submit' class='btn btn-primary'>Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

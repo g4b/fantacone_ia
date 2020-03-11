@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Student Portal</h1>
+        <h2>Welcome, <%= student.name %></h2>
+        <a href='https://docs.google.com/spreadsheets/d/1gY3jeHg3G4ONMB9UJHwrHMo4t8dH_b4O6x80Skcj5xw/edit#gid=0'>CCC Scholarships List</a>
+        <form action='searchCounselors'>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='searchName' placeholder="Counselor's Name">
+            </div>
+            <div class='form-group'>
+                <button type='submit' class='btn btn-primary'>Submit</button>
+            </div>
+        </form>
+        <p id='error'><%= error %></p>
+        <p><strong>Add New Counselor</strong></p>
+        <form action='addCounselor' method='post'>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='name' placeholder='Name'>
+            </div>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='email' placeholder='Email'>
+            </div>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='username' placeholder='Account Username'>
+            </div>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='password' placeholder='Account Password'>
+            </div>
+            <div class='form-group'>
+                <button type='submit' class='btn btn-primary'>Submit</button>
+            </div> 
+        </form>
+        <p><strong>Search and Add Colleges</strong></p>
+        <form action='searchColleges' method='post'>
+            <div class='form-group'>
+                <input type='text' class='form-control' name='name' placeholder='College Name'>
+            </div>
+            <!--<div class='form-group'>
+                <label for='addToProfile'>Add to My Profile?</label>
+                <input type='checkbox' class='form-control' name='addToProfile'>
+            </div>-->
+            <div class='form-group'>
+                <button type='submit' class='btn btn-primary'>Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
